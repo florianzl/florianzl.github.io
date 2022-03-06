@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto");
 $foregroundColor: rgb(38, 38, 38);
-$backgroundColor: #f7f7ff;
+$backgroundColor: #e6e6e6;
 $accentColor: #485869;
 $appleFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
   Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -189,19 +189,32 @@ section {
   display: flex;
   margin: 17vh auto 0 auto;
   width: 80%;
-  gap: 5vw;
+  gap: 10vw;
   color: $foregroundColor;
+  @media screen and (max-width: 1600px) {
+    gap: 5vw;
+    margin: 20vh auto 0 auto;
+  }
+  @media screen and (max-width: 1300px) {
+    margin: 25vh auto 0 auto;
+  }
+  @media screen and (max-width: 1180px) {
+    display: block;
+    width: 100%;
+  }
 }
 
 .content div {
   margin-top: 12vh;
+  margin-left: 3vw;
+  vertical-align: middle;
   h3 {
     margin: 0;
     font-family: "roboto";
     color: $accentColor;
   }
   h1 {
-    margin: 0.2vh 0 3vh 0;
+    margin: 0.2vh 0 2vh 0;
     color: $foregroundColor;
     font-family: $appleFont;
     font-size: 60px;
@@ -210,14 +223,31 @@ section {
     font-family: $appleFont;
     color: $foregroundColor;
   }
+  a {
+    font-family: $appleFont;
+    color: $accentColor;
+  }
 }
 
 //image
 .me {
+  margin-top: 0vh auto;
   width: 33%;
   height: auto;
   margin-left: 5vw;
   border-radius: 10px;
+  @media screen and (max-width: 900px) {
+  }
+}
+
+button {
+  height: 40px;
+  margin: 3vh auto;
+  font-size: 1.5vw;
+  color: $foregroundColor;
+  border-radius: 8px;
+  background: $backgroundColor;
+  box-shadow: 3px 3px 5px #a9a9a9, -3px -3px 7px #ffffff;
 }
 
 lottie-player {
@@ -225,15 +255,18 @@ lottie-player {
   @media screen and (max-width: 1600px) {
     margin: 13vh auto;
   }
-  @media screen and (max-width: 1200px) {
-    margin: 21vh auto;
+  @media screen and (max-width: 1400px) {
+    margin: 10vh auto;
   }
-}
-
-/* ------ABOUT------*/
-#about h1 {
-  text-align: center;
-  margin-top: 10vh;
+  @media screen and (max-width: 1250px) {
+    margin: 21vh auto;
+    display: none;
+    visibility: hidden;
+  }
+  @media screen and (max-width: 800px) {
+    display: none;
+    visibility: hidden;
+  }
 }
 
 /* ------PROJECTS------*/
