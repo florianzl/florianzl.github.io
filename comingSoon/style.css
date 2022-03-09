@@ -1,10 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto");
-$foregroundColor: rgb(38, 38, 38);
-$backgroundColor: #e6e6e6;
-$accentColor: #485869;
-$appleFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
 html,
 body {
   margin: 0px;
@@ -12,8 +6,9 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  background-color: $backgroundColor;
+  background-color: #e6e6e6;
 }
+
 a,
 p {
   text-decoration: none;
@@ -30,8 +25,8 @@ section {
   top: 0;
   position: fixed;
   z-index: 111;
-  font-family: $appleFont;
-  background-color: $backgroundColor;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #e6e6e6;
   opacity: 0.98;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,7 +41,7 @@ section {
 }
 
 .logo {
-  font-family: $appleFont;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-decoration: none;
   font-size: 20px;
   font-weight: 450;
@@ -72,10 +67,15 @@ section {
   text-decoration: none;
   letter-spacing: 3px;
   font-size: 14px;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
   transition: transform 250ms;
-  &:hover {
-    transform: translateY(-10px);
-  }
+  transition: transform 250ms, -webkit-transform 250ms;
+}
+
+.nav-links a:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 
 .burger {
@@ -86,7 +86,7 @@ section {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: $backgroundColor;
+  background-color: #e6e6e6;
   margin: 5px;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
@@ -109,7 +109,7 @@ section {
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: $backgroundColor;
+    background-color: #e6e6e6;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -190,15 +190,24 @@ section {
   margin: 17vh auto 0 auto;
   width: 80%;
   gap: 10vw;
-  color: $foregroundColor;
-  @media screen and (max-width: 1600px) {
+  color: #262626;
+}
+
+@media screen and (max-width: 1600px) {
+  .content {
     gap: 5vw;
     margin: 20vh auto 0 auto;
   }
-  @media screen and (max-width: 1300px) {
+}
+
+@media screen and (max-width: 1300px) {
+  .content {
     margin: 25vh auto 0 auto;
   }
-  @media screen and (max-width: 1180px) {
+}
+
+@media screen and (max-width: 1180px) {
+  .content {
     display: block;
     width: 100%;
   }
@@ -208,62 +217,78 @@ section {
   margin-top: 12vh;
   margin-left: 3vw;
   vertical-align: middle;
-  h3 {
-    margin: 0;
-    font-family: "roboto";
-    color: $accentColor;
-  }
-  h1 {
-    margin: 0.2vh 0 2vh 0;
-    color: $foregroundColor;
-    font-family: $appleFont;
-    font-size: 60px;
-  }
-  p {
-    font-family: $appleFont;
-    color: $foregroundColor;
-  }
-  a {
-    font-family: $appleFont;
-    color: $accentColor;
-  }
 }
 
-//image
+.content div h3 {
+  margin: 0;
+  font-family: "roboto";
+  color: #485869;
+}
+
+.content div h1 {
+  margin: 0.2vh 0 2vh 0;
+  color: #262626;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 60px;
+}
+
+.content div p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #262626;
+}
+
+.content div a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #485869;
+}
+
 .me {
   margin-top: 0vh auto;
   width: 33%;
   height: auto;
   margin-left: 5vw;
   border-radius: 10px;
-  @media screen and (max-width: 900px) {
-  }
 }
 
 button {
-  height: 40px;
+  border: none;
+  border-radius: 0.4em;
+  color: #262626;
+  background: #e6e6e6;
+  -webkit-box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
+          box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
+  height: 5vh;
+  width: 50%;
   margin: 3vh auto;
-  font-size: 1.5vw;
-  color: $foregroundColor;
-  border-radius: 8px;
-  background: $backgroundColor;
-  box-shadow: 3px 3px 5px #a9a9a9, -3px -3px 7px #ffffff;
+  font-size: 18pt;
 }
 
 lottie-player {
   margin: 5vh auto;
-  @media screen and (max-width: 1600px) {
+}
+
+@media screen and (max-width: 1600px) {
+  lottie-player {
     margin: 13vh auto;
   }
-  @media screen and (max-width: 1400px) {
+}
+
+@media screen and (max-width: 1400px) {
+  lottie-player {
     margin: 10vh auto;
   }
-  @media screen and (max-width: 1250px) {
+}
+
+@media screen and (max-width: 1250px) {
+  lottie-player {
     margin: 21vh auto;
     display: none;
     visibility: hidden;
   }
-  @media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 800px) {
+  lottie-player {
     display: none;
     visibility: hidden;
   }
@@ -278,13 +303,14 @@ lottie-player {
 #projects div {
   text-align: center;
 }
+
 /* ------CONTACT------*/
 #contact {
   height: 60vh;
   text-align: center;
 }
-/* ------FOOTER------*/
 
+/* ------FOOTER------*/
 footer {
   left: 0;
   bottom: 0;
@@ -301,6 +327,6 @@ footer {
 .credits p {
   margin: 1vh 0 3vh 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: $foregroundColor;
+  color: #262626;
 }
 /*# sourceMappingURL=style.css.map */
