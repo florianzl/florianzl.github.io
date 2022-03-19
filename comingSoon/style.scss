@@ -272,14 +272,124 @@ lottie-player {
 }
 
 /* ------PROJECTS------*/
-#projects h1 {
-  text-align: center;
-  margin: 10vh 0 7vh 0;
+hr {
+  visibility: hidden;
+}
+.grids {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 17vh auto 0 auto;
+  gap: 2em;
+  width: 100%;
+  font-family: $appleFont;
+  color: $foregroundColor;
 }
 
-#projects div {
-  text-align: center;
+.soccerBot {
+  max-width: 45em;
+  padding: 5pt;
+  margin: auto;
+  margin-left: 6%;
+  width: 42%;
+  border-radius: 5pt;
+  border: 3px solid gray;
+  .headline {
+    padding: 0pt;
+    margin: 0;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      padding: 0pt;
+      margin: 0pt;
+    }
+    a {
+      height: min-content;
+      width: min-content;
+    }
+    img {
+      margin-left: 1em;
+      width: 1.4em;
+      height: auto;
+    }
+  }
+  .languages {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    h3 {
+      color: #7b7b7b;
+      margin-left: 1em;
+      font-size: 1em;
+      width: fit-content;
+      padding: 5pt;
+      background-color: #e4e4e4;
+      border-radius: 8pt;
+      box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
+    }
+  }
 }
+
+.messenger {
+  padding: 5pt;
+  margin: auto;
+  margin-right: 6%;
+  width: 42%;
+  max-width: 45em;
+  border-radius: 5pt;
+  border: 3px solid gray;
+  .headlineMessenger {
+    padding: 0pt;
+    margin: 0;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      padding: 0pt;
+      margin: 0pt;
+    }
+    a {
+      height: min-content;
+      width: min-content;
+    }
+    img {
+      margin-left: 1em;
+      width: 1.4em;
+      height: auto;
+    }
+  }
+  .languagesMessenger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    h3 {
+      color: #7b7b7b;
+      margin-left: 1em;
+      font-size: 1em;
+      width: fit-content;
+      padding: 5pt;
+      background-color: #e4e4e4;
+      border-radius: 8pt;
+      box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
+    }
+  }
+}
+
 /* ------CONTACT------*/
 #contact {
   height: 60vh;

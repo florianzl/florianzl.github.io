@@ -295,13 +295,147 @@ lottie-player {
 }
 
 /* ------PROJECTS------*/
-#projects h1 {
-  text-align: center;
-  margin: 10vh 0 7vh 0;
+hr {
+  visibility: hidden;
 }
 
-#projects div {
-  text-align: center;
+.grids {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 17vh auto 0 auto;
+  gap: 2em;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #262626;
+}
+
+.soccerBot {
+  max-width: 45em;
+  padding: 5pt;
+  margin: auto;
+  margin-left: 6%;
+  width: 42%;
+  border-radius: 5pt;
+  border: 3px solid gray;
+}
+
+.soccerBot .headline {
+  padding: 0pt;
+  margin: 0;
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.soccerBot .headline h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 0pt;
+  margin: 0pt;
+}
+
+.soccerBot .headline a {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.soccerBot .headline img {
+  margin-left: 1em;
+  width: 1.4em;
+  height: auto;
+}
+
+.soccerBot .languages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.soccerBot .languages h3 {
+  color: #7b7b7b;
+  margin-left: 1em;
+  font-size: 1em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5pt;
+  background-color: #e4e4e4;
+  border-radius: 8pt;
+  -webkit-box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
+          box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
+}
+
+.messenger {
+  padding: 5pt;
+  margin: auto;
+  margin-right: 6%;
+  width: 42%;
+  max-width: 45em;
+  border-radius: 5pt;
+  border: 3px solid gray;
+}
+
+.messenger .headlineMessenger {
+  padding: 0pt;
+  margin: 0;
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.messenger .headlineMessenger h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  padding: 0pt;
+  margin: 0pt;
+}
+
+.messenger .headlineMessenger a {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
+.messenger .headlineMessenger img {
+  margin-left: 1em;
+  width: 1.4em;
+  height: auto;
+}
+
+.messenger .languagesMessenger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.messenger .languagesMessenger h3 {
+  color: #7b7b7b;
+  margin-left: 1em;
+  font-size: 1em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5pt;
+  background-color: #e4e4e4;
+  border-radius: 8pt;
+  -webkit-box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
+          box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
 }
 
 /* ------CONTACT------*/
