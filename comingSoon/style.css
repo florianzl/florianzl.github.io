@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto");
+.projects h1 {
+  border: none;
+  border-radius: 0.4em;
+  -webkit-box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
+          box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
+}
+
 html,
 body {
   margin: 0px;
@@ -40,29 +47,27 @@ section {
   -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
 }
 
-.logo {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 450;
-  letter-spacing: 1px;
-  color: black;
-}
-
-.nav-links {
+.nav .links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  width: 30%;
+  width: 35em;
 }
 
-.nav-links li {
+@media screen and (max-width: 1100px) {
+  .nav .links {
+    width: 30em;
+  }
+}
+
+.nav .links li {
   list-style: none;
 }
 
-.nav-links a {
+.nav .links a {
+  padding: 0.5em;
   color: black;
   text-decoration: none;
   letter-spacing: 3px;
@@ -73,9 +78,18 @@ section {
   transition: transform 250ms, -webkit-transform 250ms;
 }
 
-.nav-links a:hover {
+.nav .links a:hover {
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
+}
+
+.logo {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 450;
+  letter-spacing: 1px;
+  color: black;
 }
 
 .burger {
@@ -86,30 +100,25 @@ section {
 .burger div {
   width: 25px;
   height: 3px;
-  background-color: #e6e6e6;
+  background-color: #262626;
   margin: 5px;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 1250px) {
-  .nav-links {
-    width: 40%;
-  }
-}
-
 @media screen and (max-width: 800px) {
   body {
-    overflow: hidden;
+    overflow: scroll;
   }
-  .nav-links {
+  .links {
     padding: 0;
     margin: 0;
     position: absolute;
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: #e6e6e6;
+    background-color: #bfbfbf;
+    opacity: 0.8;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -129,7 +138,7 @@ section {
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
     -webkit-transition: transform 0.5s ease-in;
   }
-  .nav-links li {
+  .links li {
     opacity: 0;
   }
   .burger {
@@ -184,13 +193,7 @@ section {
 
 /* ------HOME------*/
 .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 17vh auto 0 auto;
-  width: 80%;
-  gap: 10vw;
-  color: #262626;
+  margin: auto;
 }
 
 @media screen and (max-width: 1600px) {
@@ -242,27 +245,6 @@ section {
   color: #485869;
 }
 
-.me {
-  margin-top: 0vh auto;
-  width: 33%;
-  height: auto;
-  margin-left: 5vw;
-  border-radius: 10px;
-}
-
-button {
-  border: none;
-  border-radius: 0.4em;
-  color: #262626;
-  background: #e6e6e6;
-  -webkit-box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
-          box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
-  height: 5vh;
-  width: 50%;
-  margin: 3vh auto;
-  font-size: 18pt;
-}
-
 lottie-player {
   margin: 5vh auto;
 }
@@ -296,209 +278,59 @@ lottie-player {
 
 /* ------PROJECTS------*/
 hr {
-  visibility: hidden;
+  visibility: visible;
 }
 
-.grids {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 17vh auto 0 auto;
-  gap: 2em;
-  width: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+.heading {
+  margin: 16vh auto 0 auto;
+  text-align: center;
+  font-family: "roboto";
   color: #262626;
 }
 
-.soccerBot {
-  max-width: 45em;
-  padding: 5pt;
+.heading h1 {
+  font-size: 4em;
+  margin-bottom: 0pt;
+}
+
+.heading h2 {
+  font-size: 1.2em;
+}
+
+.projects {
   margin: auto;
+  margin-top: 7em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5em;
+  width: 100%;
+}
+
+.projects h1 {
+  margin: auto;
+  font-family: "roboto", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  max-width: 45em;
+  width: 42%;
+  padding: 5pt;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.projects .soccer {
   margin-left: 6%;
-  width: 42%;
   border-radius: 5pt;
-  border: 3px solid gray;
 }
 
-.soccerBot .headline {
-  padding: 0pt;
-  margin: 0;
-  margin-top: 0.5em;
-  margin-left: 0.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.soccerBot .headline h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  padding: 0pt;
-  margin: 0pt;
-}
-
-.soccerBot .headline a {
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-}
-
-.soccerBot .headline img {
-  margin-left: 1em;
-  width: 1.4em;
-  height: auto;
-}
-
-.soccerBot .languages {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.soccerBot .languages h3 {
-  color: #7b7b7b;
-  margin-left: 1em;
-  font-size: 1em;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 5pt;
-  background-color: #e4e4e4;
-  border-radius: 8pt;
-  -webkit-box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
-          box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
-}
-
-.messenger {
-  padding: 5pt;
-  margin: auto;
-  width: 42%;
-  max-width: 45em;
+.projects .messenger {
   border-radius: 5pt;
-  border: 3px solid gray;
 }
 
-.messenger .headlineMessenger {
-  padding: 0pt;
-  margin: 0;
-  margin-top: 0.5em;
-  margin-left: 0.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.messenger .headlineMessenger h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  padding: 0pt;
-  margin: 0pt;
-}
-
-.messenger .headlineMessenger a {
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-}
-
-.messenger .headlineMessenger img {
-  margin-left: 1em;
-  width: 1.4em;
-  height: auto;
-}
-
-.messenger .languagesMessenger {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.messenger .languagesMessenger h3 {
-  color: #7b7b7b;
-  margin-left: 1em;
-  font-size: 1em;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 5pt;
-  background-color: #e4e4e4;
-  border-radius: 8pt;
-  -webkit-box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
-          box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
-}
-
-.mazeAlgorithm {
-  padding: 5pt;
-  margin: auto;
+.projects .maze {
   margin-right: 6%;
-  width: 42%;
-  max-width: 45em;
   border-radius: 5pt;
-  border: 3px solid gray;
-}
-
-.mazeAlgorithm .headlineMaze {
-  padding: 0pt;
-  margin: 0;
-  margin-top: 0.5em;
-  margin-left: 0.5em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.mazeAlgorithm .headlineMaze h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  padding: 0pt;
-  margin: 0pt;
-}
-
-.mazeAlgorithm .headlineMaze a {
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  width: -webkit-min-content;
-  width: -moz-min-content;
-  width: min-content;
-}
-
-.mazeAlgorithm .headlineMaze img {
-  margin-left: 1em;
-  width: 1.4em;
-  height: auto;
-}
-
-.mazeAlgorithm .languagesMaze {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
-
-.mazeAlgorithm .languagesMaze h3 {
-  color: #7b7b7b;
-  margin-left: 1em;
-  font-size: 1em;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 5pt;
-  background-color: #e4e4e4;
-  border-radius: 8pt;
-  -webkit-box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
-          box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
 }
 
 /* ------CONTACT------*/
