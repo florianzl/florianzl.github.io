@@ -1,28 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@100;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@100&display=swap");
 $appleFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
   Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
 $lightForegroundColor: rgb(38, 38, 38);
-$darkForegroundColor: #e9e0c8;
-$lightBackgroundColor: #c9c8c2;
-$accentColor: rgb(181, 173, 166);
+$darkForegroundColor: #deceb6;
+$navForegroundColor: #e8e4da;
+$backgroundColor: rgb(21, 20, 20);
+$accentColor: rgb(144, 150, 177);
+
+$borderPadding: clamp(3rem, 7vw, 6rem);
 
 %neuphormism {
   border: none;
   border-radius: 0.4em;
-  box-shadow: 0.35em 0.35em 1.2em #d2d2d2, -0.3em -0.3em 1.3em #f9f9f9;
+  box-shadow: 0.35em 0.35em 1.2em rgb(10, 10, 10),
+    -0.3em -0.3em 1.3em rgb(25, 25, 25);
 }
-
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 html,
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  background-color: $lightBackgroundColor;
+  background-color: $backgroundColor;
 }
 a,
 p {
@@ -41,7 +48,7 @@ section {
   position: fixed;
   z-index: 111;
   font-family: $appleFont;
-  background-color: $lightBackgroundColor;
+  background-color: $backgroundColor;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,8 +57,8 @@ section {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
   .links {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -70,7 +77,7 @@ section {
     }
     a {
       padding: 0.5em;
-      color: black;
+      color: $navForegroundColor;
       text-decoration: none;
       letter-spacing: 3px;
       font-size: 0.85em;
@@ -88,7 +95,7 @@ section {
   font-size: 1.3em;
   font-weight: 450;
   letter-spacing: 1px;
-  color: black;
+  color: $navForegroundColor;
 }
 
 .burger {
@@ -97,7 +104,7 @@ section {
   div {
     width: 25px;
     height: 3px;
-    background-color: $lightForegroundColor;
+    background-color: $darkForegroundColor;
     margin: 5px;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -223,7 +230,7 @@ section {
     color: $darkForegroundColor;
   }
   a {
-    color: $accentColor;
+    color: rgb(45, 38, 27);
   }
 
   @media (min-width: 40rem) {
@@ -234,27 +241,21 @@ section {
     }
     h3 {
       margin-top: 27vh;
-      margin-left: 6vw;
+      margin-left: 4.5vw;
       margin-bottom: 0;
-      font-family: "Merriweather", sans-serif;
-      font-size: 5rem;
-      color: $darkForegroundColor;
+      font-size: 5vw;
     }
     h1 {
       margin-top: 2vh;
-      margin-left: 6vw;
+      margin-left: 4.5vw;
       margin-bottom: 0;
-      font-family: "Roboto Slab", sans-serif;
-      font-size: 6.5rem;
-      color: $darkForegroundColor;
+      font-size: 6.5vw;
     }
     p {
       margin-top: 3vh;
-      margin-left: 6vw;
-      font-family: "Roboto Slab", sans-serif;
-      font-size: 1.2rem;
+      margin-left: 4.5vw;
+      font-size: 1.2vw;
       font-weight: 400;
-      color: $darkForegroundColor;
     }
     a {
       color: $accentColor;
@@ -263,61 +264,141 @@ section {
 }
 
 /* ------PROJECTS------*/
-hr {
-  visibility: visible;
+#projects {
+  padding: 0 $borderPadding;
+  color: $darkForegroundColor;
+  font-family: "roboto";
+  hr {
+    visibility: hidden;
+  }
 }
 
 .heading {
-  margin: 16vh auto 0 auto;
   text-align: center;
-  font-family: "roboto";
-  color: $lightForegroundColor;
   h1 {
-    font-size: 4em;
+    font-size: clamp(2.5rem, 8vw, 4rem);
     margin-bottom: 0pt;
   }
-
   h2 {
-    font-size: 1.2em;
+    font-size: clamp(0.5rem, 5vw, 1rem);
   }
 }
+
 .projects {
   margin: auto;
-  margin-top: 7em;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin-top: 3rem;
   display: flex;
-  gap: 5em;
-  width: 100%;
-  h1 {
-    margin: auto;
-    font-family: "Roboto", sans-serif;
-    font-weight: bold;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 70%;
+  text-align: center;
+}
+
+.projectCard {
+  margin-bottom: 3em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  border-width: 0.2em;
+  border-style: solid;
+  border-image: linear-gradient(to top right, rgb(62, 45, 27), rgb(120, 86, 50))
+    1;
+}
+
+@media (min-width: 40rem) {
+  .heading {
+    margin: 12vh auto 0 auto;
     text-align: center;
-    max-width: 45em;
-    width: 42%;
-    padding: 5pt;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    @extend %neuphormism;
+    h1 {
+      font-size: clamp(5rem, 5vw, 8rem);
+      margin-bottom: 0pt;
+    }
+    h2 {
+      font-size: clamp(0.5rem, 2vw, 3rem);
+    }
   }
-  .soccer {
-    margin-left: 6%;
-    border-radius: 5pt;
-  }
-  .messenger {
-    border-radius: 5pt;
-  }
-  .maze {
-    margin-right: 6%;
-    border-radius: 5pt;
+  .projects {
+    margin: auto;
+    margin-top: clamp(9rem, 18vh, 16rem);
+    flex-direction: row;
+    width: 100%;
+
+    .projectCard {
+      font-size: clamp(1rem, 1.7vw, 2rem);
+      margin: auto;
+      padding: 1em 2em;
+    }
   }
 }
 
 /* ------CONTACT------*/
 #contact {
-  height: 60vh;
-  text-align: center;
+  width: 100%;
+  padding: 0 $borderPadding;
+  display: flex;
+  flex-direction: column;
+  color: $darkForegroundColor;
+  background-color: rgb(33, 32, 32);
+
+  .contactHeading {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.7em;
+    justify-content: center;
+  }
+  .contactContent {
+    display: flex;
+    flex-direction: column;
+    p {
+      text-align: justify;
+      font-size: clamp(0.5rem, 5vw, 1rem);
+      line-height: 1.7rem;
+      margin-bottom: 15vh;
+    }
+    #emailForward {
+      height: 3.2em;
+      background: transparent;
+      color: $darkForegroundColor;
+      font-family: "roboto";
+      font-size: clamp(1rem, 5vw, 1.2rem);
+      font-weight: 700;
+      letter-spacing: 0.25ch;
+      border-width: 0.2em;
+      border-style: solid;
+      border-image: linear-gradient(
+          to top right,
+          rgb(62, 45, 27),
+          rgb(120, 86, 50)
+        )
+        1;
+    }
+  }
+}
+
+@media (min-width: 40rem) {
+  #contact {
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    .contactHeading {
+      padding-right: 2rem;
+      flex-direction: column;
+      width: 50%;
+      height: 60%;
+      text-align: right;
+      h1 {
+        margin: 0;
+      }
+    }
+    .contactContent {
+      padding-left: 2rem;
+      width: 50%;
+      height: 60%;
+      justify-content: center;
+    }
+  }
 }
 /* ------FOOTER------*/
 
