@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@100&display=swap");
 .projects h1 {
   border: none;
   border-radius: 0.4em;
@@ -13,7 +15,7 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  background-color: #e6e6e6;
+  background-color: #c9c8c2;
 }
 
 a,
@@ -33,8 +35,7 @@ section {
   position: fixed;
   z-index: 111;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  background-color: #e6e6e6;
-  opacity: 0.98;
+  background-color: #c9c8c2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,12 +54,18 @@ section {
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  width: 35em;
+  width: 40em;
 }
 
 @media screen and (max-width: 1100px) {
   .nav .links {
-    width: 30em;
+    width: 37em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .nav .links {
+    width: 33em;
   }
 }
 
@@ -71,7 +78,7 @@ section {
   color: black;
   text-decoration: none;
   letter-spacing: 3px;
-  font-size: 14px;
+  font-size: 0.85em;
   -webkit-transition: -webkit-transform 250ms;
   transition: -webkit-transform 250ms;
   transition: transform 250ms;
@@ -86,7 +93,7 @@ section {
 .logo {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.3em;
   font-weight: 450;
   letter-spacing: 1px;
   color: black;
@@ -107,9 +114,6 @@ section {
 }
 
 @media screen and (max-width: 800px) {
-  body {
-    overflow: scroll;
-  }
   .links {
     padding: 0;
     margin: 0;
@@ -118,7 +122,7 @@ section {
     height: 92vh;
     top: 8vh;
     background-color: #bfbfbf;
-    opacity: 0.8;
+    opacity: 0.95;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -192,87 +196,81 @@ section {
 }
 
 /* ------HOME------*/
-.content {
-  margin: auto;
+.home .landingWrapper {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-image: url("img/landingBlackMobile.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-@media screen and (max-width: 1600px) {
-  .content {
-    gap: 5vw;
-    margin: 20vh auto 0 auto;
+.home h3 {
+  margin-top: 62vh;
+  margin-left: 6vw;
+  margin-bottom: 0;
+  font-family: "Merriweather", sans-serif;
+  font-size: 2rem;
+  color: #e9e0c8;
+}
+
+.home h1 {
+  margin-top: 1vh;
+  margin-left: 6vw;
+  margin-bottom: 0;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 3rem;
+  color: #e9e0c8;
+}
+
+.home p {
+  margin-top: 1.5vh;
+  margin-left: 6vw;
+  margin-right: 2vw;
+  font-family: "Roboto Slab", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #e9e0c8;
+}
+
+.home a {
+  color: #b5ada6;
+}
+
+@media (min-width: 40rem) {
+  .home .landingWrapper {
+    background-image: url("img/landingBlack.JPG");
+    background-position: top;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
-}
-
-@media screen and (max-width: 1300px) {
-  .content {
-    margin: 25vh auto 0 auto;
+  .home h3 {
+    margin-top: 27vh;
+    margin-left: 6vw;
+    margin-bottom: 0;
+    font-family: "Merriweather", sans-serif;
+    font-size: 5rem;
+    color: #e9e0c8;
   }
-}
-
-@media screen and (max-width: 1180px) {
-  .content {
-    display: block;
-    width: 100%;
+  .home h1 {
+    margin-top: 2vh;
+    margin-left: 6vw;
+    margin-bottom: 0;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 6.5rem;
+    color: #e9e0c8;
   }
-}
-
-.content div {
-  margin-top: 12vh;
-  margin-left: 3vw;
-  vertical-align: middle;
-}
-
-.content div h3 {
-  margin: 0;
-  font-family: "roboto";
-  color: #485869;
-}
-
-.content div h1 {
-  margin: 0.2vh 0 2vh 0;
-  color: #262626;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 60px;
-}
-
-.content div p {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #262626;
-}
-
-.content div a {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #485869;
-}
-
-lottie-player {
-  margin: 5vh auto;
-}
-
-@media screen and (max-width: 1600px) {
-  lottie-player {
-    margin: 13vh auto;
+  .home p {
+    margin-top: 3vh;
+    margin-left: 6vw;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #e9e0c8;
   }
-}
-
-@media screen and (max-width: 1400px) {
-  lottie-player {
-    margin: 10vh auto;
-  }
-}
-
-@media screen and (max-width: 1250px) {
-  lottie-player {
-    margin: 21vh auto;
-    display: none;
-    visibility: hidden;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  lottie-player {
-    display: none;
-    visibility: hidden;
+  .home a {
+    color: #b5ada6;
   }
 }
 
@@ -309,7 +307,7 @@ hr {
 
 .projects h1 {
   margin: auto;
-  font-family: "roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: bold;
   text-align: center;
   max-width: 45em;
@@ -344,6 +342,8 @@ footer {
   left: 0;
   bottom: 0;
   text-align: center;
+  color: #fff;
+  background-color: #1b1910;
 }
 
 .links img {
