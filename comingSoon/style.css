@@ -224,10 +224,11 @@ section {
 
 .heading {
   text-align: center;
+  margin-top: 10vh;
 }
 .heading h1 {
   font-family: "roboto slab", sans-serif;
-  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-size: clamp(2.2rem, 7vw, 4rem);
   margin-bottom: 0pt;
 }
 .heading h2 {
@@ -237,7 +238,7 @@ section {
 
 .projects {
   margin: auto;
-  margin-top: 3rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -246,7 +247,7 @@ section {
 }
 
 .projectCard {
-  margin-bottom: 3em;
+  margin-bottom: 2.5em;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
   border-width: 0.2em;
@@ -290,8 +291,9 @@ section {
   background-color: #212020;
 }
 #contact .contactHeading {
+  margin-top: 3.3rem;
   font-family: "roboto slab", sans-serif;
-  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-size: clamp(0.1rem, 7vw, 1.9rem);
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -305,6 +307,7 @@ section {
 }
 #contact .contactContent p {
   text-align: justify;
+  font-family: "roboto";
   font-size: clamp(0.5rem, 5vw, 1rem);
   line-height: 1.7rem;
   margin-bottom: 15vh;
@@ -329,19 +332,32 @@ section {
     flex-wrap: nowrap;
   }
   #contact .contactHeading {
-    padding-right: 2rem;
+    margin-top: 0;
+    padding-right: 3rem;
     flex-direction: column;
+    font-size: clamp(1rem, 4vw, 5rem);
     width: 50%;
-    height: 60%;
+    height: 80%;
     text-align: right;
   }
   #contact .contactHeading h1 {
     margin: 0;
   }
   #contact .contactContent {
-    padding-left: 2rem;
+    padding-inline: clamp(2rem, 3vw, 6rem);
     width: 50%;
-    height: 60%;
+    height: 80%;
+    justify-content: center;
+  }
+  #contact .contactContent p {
+    font-size: clamp(0.8rem, 1.3vw, 1.7rem);
+    line-height: 2.5rem;
+    margin-bottom: 5vh;
+  }
+  #contact .contactContent #emailForward {
+    width: clamp(20rem, 30vw, 35rem);
+    font-size: clamp(0.8rem, 1.5vw, 1.7rem);
+    margin-inline: auto;
     justify-content: center;
   }
 }
