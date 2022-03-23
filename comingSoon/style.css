@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@100;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@100;700&family=Source+Code+Pro&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -34,9 +32,9 @@ section {
   background-color: #151414;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
-  padding: 0;
+  padding: 0 clamp(3rem, 7vw, 6rem);
 }
 .nav .links {
   font-size: clamp(0.5rem, 1.4vw, 1.3rem);
@@ -63,7 +61,7 @@ section {
   justify-content: left;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-decoration: none;
-  font-size: clamp(0.7rem, 1.6vw, 1.5rem);
+  font-size: clamp(1rem, 5vw, 2rem);
   font-weight: 450;
   letter-spacing: 1px;
   color: #e8e4da;
@@ -255,6 +253,18 @@ section {
   -o-border-image: linear-gradient(to top right, #3e2d1b, #785632) 1;
      border-image: linear-gradient(to top right, #3e2d1b, #785632) 1;
 }
+.projectCard button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+.projectCard button h1 {
+  color: #deceb6;
+}
+.projectCard button:hover {
+  cursor: pointer;
+}
 
 @media (min-width: 40rem) {
   .heading {
@@ -276,7 +286,10 @@ section {
     width: 100%;
   }
   .projects .projectCard {
-    font-size: clamp(1rem, 1.7vw, 2rem);
+    border-width: clamp(0.2rem, 0.3vw, 0.4rem);
+  }
+  .projects .projectCard button h1 {
+    font-size: clamp(1rem, 2.3vw, 5rem);
     margin: auto;
     padding: 1em 2em;
   }
@@ -306,8 +319,8 @@ section {
   flex-direction: column;
 }
 #contact .contactContent p {
-  text-align: justify;
   font-family: "roboto";
+  text-align: justify;
   font-size: clamp(0.5rem, 5vw, 1rem);
   line-height: 1.7rem;
   margin-bottom: 15vh;
@@ -365,38 +378,161 @@ section {
 footer {
   left: 0;
   bottom: 0;
-  height: clamp(4em, 7vh, 6rem);
+  height: clamp(4em, 6vh, 6rem);
+  background-color: #1d1c1c;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-footer .links {
-  height: 2rem;
-  width: 10%;
-  margin-inline: auto;
   justify-content: space-around;
-  display: flex;
-  flex-direction: row;
-}
-footer .links a {
-  padding: 0;
-  margin: 0;
-}
-footer .links a img {
-  width: clamp(0.5rem, 1.8vw, 1.5rem);
-  height: auto;
-}
-footer .credits {
-  margin-inline: auto;
-  margin-top: 0.2rem;
-  margin-bottom: 0.3rem;
 }
 footer .credits p {
+  color: #deceb6;
   margin: auto;
-  font-size: clamp(0.3rem, 5vw, 1rem);
+  font-size: clamp(0.1rem, 3vw, 2rem);
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: #e8e4da;
+}
+@media (min-width: 40rem) {
+  footer .credits p {
+    font-size: clamp(0.1rem, 1.2vw, 1.4rem);
+  }
 }
 
+/*----------------PROJECT PAGES----------------*/
+/* ------Soccer robot------*/
+.project {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 0 clamp(3rem, 7vw, 6rem);
+  margin-top: 14vh;
+  color: #deceb6;
+}
+.project .projectHeading {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7em;
+  width: 100%;
+  font-family: "roboto slab", sans-serif;
+  font-size: clamp(0.1rem, 5vw, 1.5rem);
+}
+.project .projectHeading h1 {
+  margin: 0;
+}
+.project .projectContent {
+  display: flex;
+  flex-direction: column;
+}
+.project .projectContent p {
+  line-height: 1.7rem;
+  text-align: justify;
+  margin-bottom: 1vh;
+  margin-top: 5vh;
+  font-family: "roboto";
+  font-size: clamp(0.5rem, 4vw, 1.2rem);
+}
+.project .projectContent .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+.project .projectContent .bottom .projectLanguages {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.project .projectContent .bottom .projectLanguages h1 {
+  padding: 0.2em 0.4em;
+  font-family: "Source Code Pro";
+  font-size: clamp(0.5rem, 4vw, 1.1rem);
+  color: #b0aba4;
+  background-color: #323030;
+  border: none;
+  border-radius: 5pt;
+}
+.project .projectContent .bottom .projectLinks {
+  display: flex;
+  flex-direction: row;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.project .projectContent .bottom .projectLinks button {
+  border: none;
+  background-color: transparent;
+}
+.project .projectContent .bottom .projectLinks button img {
+  width: clamp(0.5rem, 10vw, 1.8rem);
+  height: auto;
+  opacity: 0.6;
+}
+
+@media (min-width: 40rem) {
+  .project {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 0;
+    height: 100vh;
+    margin: auto;
+  }
+  .project .projectHeading {
+    padding-right: 3rem;
+    flex-direction: column;
+    font-size: clamp(1rem, 3.2vw, 4.3rem);
+    width: 50%;
+    height: 100%;
+    text-align: right;
+  }
+  .project .projectHeading h1 {
+    margin: 0;
+  }
+  .project .projectContent {
+    padding-inline: clamp(2rem, 3vw, 6rem);
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+  }
+  .project .projectContent p {
+    font-size: clamp(0.8rem, 1.3vw, 1.7rem);
+    line-height: clamp(1rem, 2.5vw, 2.6rem);
+  }
+  .project .projectContent .bottom .projectLanguages h1 {
+    font-size: clamp(0.8rem, 1.3vw, 1.7rem);
+  }
+  .project .projectContent .bottom .projectLinks button img {
+    width: clamp(0.5rem, 2.5vw, 3rem);
+  }
+}
+/* ------Maze Algorithm------*/
+.mazeHeading {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7em;
+  width: 100%;
+  font-family: "roboto slab", sans-serif;
+  font-size: clamp(0.5rem, 4.4vw, 1.3rem);
+}
+.mazeHeading h1 {
+  margin: 0;
+}
+
+@media (min-width: 40rem) {
+  .mazeHeading {
+    padding-right: 3rem;
+    flex-direction: column;
+    font-size: clamp(1rem, 3.2vw, 4.3rem);
+    width: 50%;
+    height: 100%;
+    text-align: right;
+  }
+  .mazeHeading h1 {
+    margin: 0;
+  }
+}
 /*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */

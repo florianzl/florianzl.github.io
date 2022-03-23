@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@100;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Slab:wght@400;700&family=Roboto:wght@100;700&family=Source+Code+Pro&display=swap");
 $appleFont: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
   Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
@@ -51,9 +49,9 @@ section {
   background-color: $backgroundColor;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
-  padding: 0;
+  padding: 0 $borderPadding;
   .links {
     font-size: clamp(0.5rem, 1.4vw, 1.3rem);
     display: flex;
@@ -80,7 +78,7 @@ section {
   justify-content: left;
   font-family: $appleFont;
   text-decoration: none;
-  font-size: clamp(0.7rem, 1.6vw, 1.5rem);
+  font-size: clamp(1rem, 5vw, 2rem);
   font-weight: 450;
   letter-spacing: 1px;
   color: $navForegroundColor;
@@ -293,6 +291,18 @@ section {
   border-style: solid;
   border-image: linear-gradient(to top right, rgb(62, 45, 27), rgb(120, 86, 50))
     1;
+  button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    h1 {
+      color: $darkForegroundColor;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 @media (min-width: 40rem) {
@@ -314,9 +324,14 @@ section {
     width: 100%;
 
     .projectCard {
-      font-size: clamp(1rem, 1.7vw, 2rem);
-      margin: auto;
-      padding: 1em 2em;
+      border-width: clamp(0.2rem, 0.3vw, 0.4rem);
+      button {
+        h1 {
+          font-size: clamp(1rem, 2.3vw, 5rem);
+          margin: auto;
+          padding: 1em 2em;
+        }
+      }
     }
   }
 }
@@ -345,8 +360,8 @@ section {
     display: flex;
     flex-direction: column;
     p {
-      text-align: justify;
       font-family: "roboto";
+      text-align: justify;
       font-size: clamp(0.5rem, 5vw, 1rem);
       line-height: 1.7rem;
       margin-bottom: 15vh;
@@ -403,7 +418,7 @@ section {
       #emailForward {
         width: clamp(20rem, 30vw, 35rem);
         font-size: clamp(0.8rem, 1.5vw, 1.7rem);
-        margin-inline: auto;‘
+        margin-inline: auto;
         justify-content: center;
       }
     }
@@ -414,38 +429,178 @@ section {
 footer {
   left: 0;
   bottom: 0;
-  height: clamp(4em, 7vh, 6rem);
+  height: clamp(4em, 6vh, 6rem);
+  background-color: rgb(29, 28, 28);
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
 
-  .links {
-    height: 2rem;
-    width: 10%;
-    margin-inline: auto;
-    justify-content: space-around;
-    display: flex;
-    flex-direction: row;
-    a {
-      padding: 0;
-      margin: 0;
-      img {
-        width: clamp(0.5rem, 1.8vw, 1.5rem);
-        height: auto;
+  .credits {
+    p {
+      color: $darkForegroundColor;
+      margin: auto;
+      font-size: clamp(0.1rem, 3vw, 2rem);
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+  }
+
+  @media (min-width: 40rem) {
+    .credits {
+      p {
+        font-size: clamp(0.1rem, 1.2vw, 1.4rem);
       }
     }
   }
-  .credits {
-    margin-inline: auto;
-    margin-top: 0.2rem;
-    margin-bottom: 0.3rem;
+}
+
+/*----------------PROJECT PAGES----------------*/
+
+/* ------Soccer robot------*/
+.project {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 0 $borderPadding;
+  margin-top: 14vh;
+  color: $darkForegroundColor;
+
+  .projectHeading {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7em;
+    width: 100%;
+    font-family: "roboto slab", sans-serif;
+    font-size: clamp(0.1rem, 5vw, 1.5rem);
+    h1 {
+      margin: 0;
+    }
+  }
+  .projectContent {
+    display: flex;
+    flex-direction: column;
     p {
-      margin: auto;
-      font-size: clamp(0.3rem, 5vw, 1rem);
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-      color: $navForegroundColor;
+      line-height: 1.7rem;
+      text-align: justify;
+      margin-bottom: 1vh;
+      margin-top: 5vh;
+      font-family: "roboto";
+      font-size: clamp(0.5rem, 4vw, 1.2rem);
+    }
+    .bottom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 0.5rem;
+      .projectLanguages {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        margin-top: auto;
+        margin-bottom: auto;
+        h1 {
+          padding: 0.2em 0.4em;
+          font-family: "Source Code Pro";
+          font-size: clamp(0.5rem, 4vw, 1.1rem);
+          color: rgb(176, 171, 164);
+          background-color: rgb(50, 48, 48);
+          border: none;
+          border-radius: 5pt;
+        }
+      }
+      .projectLinks {
+        display: flex;
+        flex-direction: row;
+        margin-top: auto;
+        margin-bottom: auto;
+        button {
+          border: none;
+          background-color: transparent;
+          img {
+            width: clamp(0.5rem, 10vw, 1.8rem);
+            height: auto;
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 40rem) {
+  .project {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 0;
+    height: 100vh;
+    margin: auto;
+
+    .projectHeading {
+      padding-right: 3rem;
+      flex-direction: column;
+      font-size: clamp(1rem, 3.2vw, 4.3rem);
+      width: 50%;
+      height: 100%;
+      text-align: right;
+      h1 {
+        margin: 0;
+      }
+    }
+    .projectContent {
+      padding-inline: clamp(2rem, 3vw, 6rem);
+      width: 50%;
+      height: 100%;
+      justify-content: center;
+      p {
+        font-size: clamp(0.8rem, 1.3vw, 1.7rem);
+        line-height: clamp(1rem, 2.5vw, 2.6rem);
+      }
+      .bottom {
+        .projectLanguages {
+          h1 {
+            font-size: clamp(0.8rem, 1.3vw, 1.7rem);
+          }
+        }
+        .projectLinks {
+          button {
+            img {
+              width: clamp(0.5rem, 2.5vw, 3rem);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ------Maze Algorithm------*/
+.mazeHeading {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7em;
+  width: 100%;
+  font-family: "roboto slab", sans-serif;
+  font-size: clamp(0.5rem, 4.4vw, 1.3rem);
+  h1 {
+    margin: 0;
+  }
+}
+
+@media (min-width: 40rem) {
+  .mazeHeading {
+    padding-right: 3rem;
+    flex-direction: column;
+    font-size: clamp(1rem, 3.2vw, 4.3rem);
+    width: 50%;
+    height: 100%;
+    text-align: right;
+    h1 {
+      margin: 0;
     }
   }
 }
