@@ -420,6 +420,9 @@ section {
         font-size: clamp(0.8rem, 1.5vw, 1.7rem);
         margin-inline: auto;
         justify-content: center;
+        &:hover {
+          cursor: pointer;
+        }
       }
     }
   }

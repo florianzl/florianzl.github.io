@@ -373,6 +373,9 @@ section {
     margin-inline: auto;
     justify-content: center;
   }
+  #contact .contactContent #emailForward:hover {
+    cursor: pointer;
+  }
 }
 /* ------FOOTER------*/
 footer {
