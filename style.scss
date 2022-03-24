@@ -9,6 +9,7 @@ $backgroundColor: rgb(21, 20, 20);
 $accentColor: rgb(144, 150, 177);
 
 $borderPadding: clamp(3rem, 7vw, 6rem);
+$animate: all 0.2s ease-in-out;
 
 %neuphormism {
   border: none;
@@ -99,35 +100,25 @@ section {
 
 @media screen and (max-width: 800px) {
   .links {
+    overflow: hidden;
     padding: 0;
-    margin: 0;
     position: absolute;
     right: 0px;
-    height: 92vh;
+    height: 100vh;
+    width: 80%;
     top: 8vh;
-    background-color: #bfbfbf;
+    background-color: $backgroundColor;
     opacity: 0.95;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    width: 45%;
-    -webkit-transform: translateX(100%);
+    margin: auto;
     transform: translateX(100%);
-    -webkit-transition: -webkit-transform 0.5s ease-in;
-    transition: -webkit-transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
-    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
-    -webkit-transition: transform 0.5s ease-in;
-  }
-  .links li {
-    opacity: 0;
+    li {
+      font-size: clamp(0.5rem, 7vw, 2rem);
+      margin: auto;
+    }
   }
   .burger {
     display: block;
@@ -135,19 +126,16 @@ section {
 }
 
 .nav-active {
-  -webkit-transform: translateX(0%);
   transform: translateX(0%);
 }
 
 @-webkit-keyframes navLinkFade {
   from {
     opacity: 0;
-    -webkit-transform: translateX(50px);
     transform: translateX(50px);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateX(0px);
     transform: translateX(0px);
   }
 }
@@ -155,18 +143,15 @@ section {
 @keyframes navLinkFade {
   from {
     opacity: 0;
-    -webkit-transform: translateX(50px);
     transform: translateX(50px);
   }
   to {
     opacity: 1;
-    -webkit-transform: translateX(0px);
     transform: translateX(0px);
   }
 }
 
 .toggle .line1 {
-  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 
@@ -245,6 +230,10 @@ section {
     }
     a {
       color: $accentColor;
+      &:hover {
+        text-decoration: underline;
+        text-decoration-color: $accentColor;
+      }
     }
   }
 }

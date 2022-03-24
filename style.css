@@ -82,25 +82,25 @@ section {
 
 @media screen and (max-width: 800px) {
   .links {
+    overflow: hidden;
     padding: 0;
-    margin: 0;
     position: absolute;
     right: 0px;
-    height: 92vh;
+    height: 100vh;
+    width: 80%;
     top: 8vh;
-    background-color: #bfbfbf;
+    background-color: #151414;
     opacity: 0.95;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 45%;
+    margin: auto;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
-    -webkit-transition: transform 0.5s ease-in;
   }
-
   .links li {
-    opacity: 0;
+    font-size: clamp(0.5rem, 7vw, 2rem);
+    margin: auto;
   }
 
   .burger {
@@ -207,6 +207,11 @@ section {
   }
   .home a {
     color: #9096b1;
+  }
+  .home a:hover {
+    text-decoration: underline;
+    -webkit-text-decoration-color: #9096b1;
+            text-decoration-color: #9096b1;
   }
 }
 
