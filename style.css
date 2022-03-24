@@ -473,6 +473,9 @@ footer .credits p {
   height: auto;
   opacity: 0.6;
 }
+.project .projectContent .bottom .projectLinks button:hover {
+  cursor: pointer;
+}
 
 @media (min-width: 40rem) {
   .project {
