@@ -286,6 +286,7 @@ section {
     padding: 0;
     margin: 0;
     h1 {
+      font-size: clamp(0.5rem, 6vw, 2rem);
       color: $darkForegroundColor;
     }
     &:hover {
@@ -314,6 +315,9 @@ section {
 
     .projectCard {
       border-width: clamp(0.2rem, 0.3vw, 0.4rem);
+      &:hover {
+        border-width: clamp(0.3em, 0.5vw, 0.6em);
+      }
       button {
         h1 {
           font-size: clamp(1rem, 2.3vw, 5rem);
@@ -421,6 +425,7 @@ section {
         justify-content: center;
         &:hover {
           cursor: pointer;
+          border-width: clamp(0.3em, 0.5vw, 0.6em);
         }
       }
     }

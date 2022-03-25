@@ -265,6 +265,7 @@ section {
   margin: 0;
 }
 .projectCard button h1 {
+  font-size: clamp(0.5rem, 6vw, 2rem);
   color: #deceb6;
 }
 .projectCard button:hover {
@@ -292,6 +293,9 @@ section {
   }
   .projects .projectCard {
     border-width: clamp(0.2rem, 0.3vw, 0.4rem);
+  }
+  .projects .projectCard:hover {
+    border-width: clamp(0.3em, 0.5vw, 0.6em);
   }
   .projects .projectCard button h1 {
     font-size: clamp(1rem, 2.3vw, 5rem);
@@ -390,6 +394,7 @@ section {
   }
   #contact .contactContent #emailForward:hover {
     cursor: pointer;
+    border-width: clamp(0.3em, 0.5vw, 0.6em);
   }
 }
 /* ------FOOTER------*/
