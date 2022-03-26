@@ -19,9 +19,6 @@ const navSlide = () => {
         //Burger animation
         burger.classList.toggle('toggle');
     });
-
-    
-    
 }
 
 navSlide();

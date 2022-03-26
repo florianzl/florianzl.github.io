@@ -23,6 +23,7 @@ $animate: all 0.2s ease-in-out;
 }
 html,
 body {
+  overflow: auto;
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -34,30 +35,43 @@ a,
 p {
   text-decoration: none;
 }
+hr {
+  visibility: hidden;
+}
 
 section {
   height: 100vh;
 }
 
 .nav {
-  height: 8vh;
+  height: 9vh;
   width: 100%;
   left: 0;
   top: 0;
   position: fixed;
   z-index: 111;
   font-family: $appleFont;
-  background-color: $backgroundColor;
+  background-color: rgba(19, 19, 19, 0.15);
   display: flex;
+  opacity: 0.9909;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
   padding: 0 $borderPadding;
+  border-bottom: 1px solid rgba(169, 160, 150, 0.5);
   .links {
-    font-size: clamp(0.5rem, 1.4vw, 1.3rem);
+    font-size: clamp(0.5rem, 1.3vw, 1.6rem);
     display: flex;
     justify-content: space-around;
-    width: clamp(30rem, 50vw, 55rem);
+    width: clamp(25rem, 40vw, 50rem);
+    .resume {
+      border-radius: clamp(3pt, 0.5vw, 6pt);
+      border-width: 0.1em;
+      padding: 0.5rem;
+      border-style: solid;
+      border-color: rgb(169, 160, 150);
+    }
     li {
       list-style: none;
     }
@@ -98,17 +112,21 @@ section {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 40rem) {
+  body {
+    overflow: hidden;
+  }
   .links {
     overflow: hidden;
     padding: 0;
     position: absolute;
     right: 0px;
     height: 100vh;
-    width: 80%;
-    top: 8vh;
-    background-color: $backgroundColor;
-    opacity: 0.95;
+    top: 0;
+    background-color: rgba(19, 19, 19, 0.65);
+    opacity: 0.9909;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,6 +136,8 @@ section {
     li {
       font-size: clamp(0.5rem, 7vw, 2rem);
       margin: auto;
+      padding-top: 0;
+      padding-bottom: 15vh;
     }
   }
   .burger {
@@ -176,7 +196,7 @@ section {
     background-repeat: no-repeat;
   }
   h3 {
-    margin-top: 62vh;
+    margin-top: 60vh;
     margin-left: 6vw;
     margin-bottom: 0;
     font-family: "Merriweather", sans-serif;
@@ -202,6 +222,28 @@ section {
   }
   a {
     color: rgb(45, 38, 27);
+  }
+  .personalLinks {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-left: 6vw;
+
+    button {
+      background-color: transparent;
+      border: none;
+      margin-right: 1rem;
+      padding: 0;
+      img {
+        margin: 0;
+        padding: 0;
+        width: 1.5rem;
+        height: auto;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 
   @media (min-width: 40rem) {
@@ -233,6 +275,15 @@ section {
       &:hover {
         text-decoration: underline;
         text-decoration-color: $accentColor;
+      }
+    }
+    .personalLinks {
+      margin-left: 4.5vw;
+      button {
+        margin-right: clamp(0.5rem, 1vw, 1rem);
+        img {
+          width: clamp(1rem, 1.5vw, 2rem);
+        }
       }
     }
   }
