@@ -65,13 +65,6 @@ section {
     display: flex;
     justify-content: space-around;
     width: clamp(25rem, 40vw, 50rem);
-    .resume {
-      border-radius: clamp(3pt, 0.5vw, 6pt);
-      border-width: 0.1em;
-      padding: 0.5rem;
-      border-style: solid;
-      border-color: rgb(169, 160, 150);
-    }
     li {
       list-style: none;
     }
@@ -112,7 +105,7 @@ section {
   }
 }
 
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 50rem) {
   body {
     overflow: hidden;
   }
@@ -246,7 +239,7 @@ section {
     }
   }
 
-  @media (min-width: 40rem) {
+  @media (min-width: 50rem) {
     .landingWrapper {
       background-image: url("img/landingBlack.jpg");
       background-position: top;
@@ -346,7 +339,7 @@ section {
   }
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 50rem) {
   .heading {
     margin: 12vh auto 0 auto;
     text-align: center;
@@ -431,7 +424,7 @@ section {
   }
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 50rem) {
   #contact {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -455,7 +448,7 @@ section {
       justify-content: center;
       p {
         font-size: clamp(0.8rem, 1.3vw, 1.7rem);
-        line-height: 2.5rem;
+        line-height: clamp(1.5rem, 2vw, 2.5rem);
         margin-bottom: 5vh;
       }
 
@@ -581,7 +574,7 @@ footer {
     }
   }
 }
-@media (min-width: 40rem) {
+@media (min-width: 50rem) {
   .project {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -642,7 +635,7 @@ footer {
   }
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 50rem) {
   .mazeHeading {
     padding-right: 3rem;
     flex-direction: column;
