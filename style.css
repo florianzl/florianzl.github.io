@@ -96,11 +96,13 @@ section {
   .links {
     overflow: hidden;
     padding: 0;
-    position: absolute;
-    right: 0px;
+    right: 0;
     height: 100vh;
-    top: 0;
-    background-color: rgba(19, 19, 19, 0.65);
+    width: 100vw;
+    top: 9vh;
+    position: absolute;
+    background-color: rgba(19, 19, 19, 0.8);
+    display: flex;
     opacity: 0.9909;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
